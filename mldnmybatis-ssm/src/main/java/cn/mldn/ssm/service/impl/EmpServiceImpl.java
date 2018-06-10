@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.mldn.ssm.dao.IEmpDAO;
@@ -15,7 +16,7 @@ import cn.mldn.util.service.abs.AbstractService;
 
 @Service
 public class EmpServiceImpl extends AbstractService implements IEmpService {
-	@Resource(name="empDAOImpl")
+	@Autowired
 	private IEmpDAO empDAO;
 
 	@Override
@@ -28,6 +29,7 @@ public class EmpServiceImpl extends AbstractService implements IEmpService {
 	public boolean edit(Emp vo) {
 		// TODO Auto-generated method stub
 		return empDAO.doEdit(vo);
+		 
 	}
 
 	@Override
@@ -39,7 +41,7 @@ public class EmpServiceImpl extends AbstractService implements IEmpService {
 	@Override
 	public boolean delete(Set<Long> ids) {
 		// TODO Auto-generated method stub
-		return empDAO.doRemove(ids);
+		return empDAO.doRemove(ids.toArray());
 	}
 
 	@Override

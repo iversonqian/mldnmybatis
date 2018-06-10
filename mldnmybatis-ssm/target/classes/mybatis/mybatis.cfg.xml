@@ -7,9 +7,9 @@
 		<setting name="cacheEnabled" value="true"/>
 	</settings>
 	<typeAliases>
-		<package name="cn.mldn.ssm.vo"/>
+		<package name="cn.mldn.ssm.dao.table.entity"/>
 	</typeAliases>
-	<mappers>
+	<!-- <mappers>
 		<mapper resource="mybatis/mapper/cn/mldn/mapping/Emp.xml"/>
-	</mappers>
+	</mappers> -->
 </configuration> 

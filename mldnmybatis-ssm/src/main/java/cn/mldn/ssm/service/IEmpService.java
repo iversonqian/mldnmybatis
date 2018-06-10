@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 
 import cn.mldn.ssm.vo.Emp;
@@ -11,7 +12,7 @@ import cn.mldn.ssm.vo.Emp;
 public interface IEmpService {
 	@Cacheable(cacheNames="emp")
 	public boolean add(Emp vo);
-	@Cacheable(cacheNames="emp")
+	@CachePut(cacheNames="emp", key="#vo.empno")
 	public boolean edit(Emp vo);
 	@Cacheable(cacheNames="emp")
 	public Emp preEdit(Long id);

@@ -41,6 +41,18 @@
 	<dependencyManagement>
 		<dependencies>
 		<dependency>
+		    <groupId>com.dyuproject.protostuff</groupId>
+		    <artifactId>protostuff-core</artifactId>
+		    <version>1.1.3</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>com.dyuproject.protostuff</groupId>
+		    <artifactId>protostuff-runtime</artifactId>
+		    <version>1.1.3</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache</artifactId>
 				<version>${ehcache.version}</version>
@@ -271,6 +283,7 @@
 					<encode>${project.build.sourceEncoding}</encode>
 				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 	

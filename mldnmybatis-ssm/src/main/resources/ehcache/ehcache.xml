@@ -11,8 +11,8 @@
 		name="emp" 
 		maxElementsInMemory="2000"
 		eternal="false" 
-		timeToIdleSeconds="20" 
-		timeToLiveSeconds="20"
+		timeToIdleSeconds="200" 
+		timeToLiveSeconds="200"
 		overflowToDisk="true">
 	</cache>
 </ehcache>
